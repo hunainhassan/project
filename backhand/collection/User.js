@@ -20,6 +20,43 @@ let mongoose= require('mongoose');
         type:Number,
         required:true
     },
+    contact:{
+        type:Number,
+        required:true
+    },
+    height:{
+        type:Number,
+        required:true
+    },
+    weight:{
+        type:Number,
+        required:true
+    },
+    bmi_index:{
+        type:Number,
+        required:true
+    },
+    ganretic_disease:{
+        type:String,
+        required:true
+    },
+    bp:{
+        type:Number,
+        required:true
+    },
+    suger:{
+        type:Number,
+        required:true
+    },
+    diabites:{
+        type:Number,
+        required:true
+    },
+    target_weight:{
+        type:Number,
+        required:true
+    },
+  
     record_at:{
         type:Date,
         default:Date.now

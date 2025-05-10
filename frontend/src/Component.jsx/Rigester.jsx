@@ -9,7 +9,20 @@ export default function Rigester() {
   let [email, setEmail] = useState("")
   let [pswd, setPswd] = useState("")
   let [gender, setGender] = useState("")
-  let [age, setAge] = useState(0)
+  let [contact, setContact] = useState(0)
+  let [height, setHeight] = useState(0)
+  let [weight, setWeight] = useState(0)
+  let [bmi_index, setbmi_index] = useState(0)
+  let [ganretic_disease, setganretic_disease] = useState("")
+  let [bp, setbp] = useState(0)
+  let [suger, setsuger] = useState(0)
+  let [diabites, setdiabites] = useState(0)
+  let [target_weight, settarget_weight] = useState(0)
+
+  
+
+  
+
 
   function clear() {
     setName("");
@@ -17,6 +30,18 @@ export default function Rigester() {
     setGender("");
     setPswd("")
     setAge(0)
+    setContact(0)
+    setHeight(0)
+    setWeight(0)
+    setbmi_index(0)
+    setganretic_disease(0)
+    setbp(0)
+    setsuger(0)
+    setdiabites(0)
+    settarget_weight(0)
+
+
+
   }
 
   async function register_user(e) {
@@ -40,7 +65,17 @@ export default function Rigester() {
           email: email,
           password: pswd,
           gender: gender,
-          age: age
+          age: age,
+          contact:contact,
+          height:height,
+          weight:weight,
+          bmi_index:bmi_index,
+          ganretic_disease:ganretic_disease,
+          bp:bp,
+          suger:suger,
+          ganretic_disease:ganretic_disease,
+          diabites:diabites,
+          target_weight:target_weight
         })
         clear()
         toast.success(userapi.data.msg)   
@@ -85,7 +120,11 @@ export default function Rigester() {
         <label for="age">Age</label>
         <input type="number" id="age" name="age" required min="13" className='form-control my-2' value={age}
           onChange={(e) => setAge(e.target.value)} />
-
+  
+        <label for="age">Contact</label>
+        <input type="number" id="age" name="age" required min="13" className='form-control my-2' value={age}
+          onChange={(e) => setContact(e.target.value)} />
+        
         <button className='btn btn-primary' onClick={register_user}>Register Now</button>
         <ToastContainer />
 
